@@ -10,7 +10,7 @@ last_alert_status = None
 
 # Дані для SendPulse
 BOT_ID = "6571c6acaa0e5f3a19061706"
-TOKEN = "Bearer ВСТАВ_ТУТ_СВІЙ_ТОКЕН"  # Не забудь вставити свій токен сюди
+TOKEN = "Bearer 6905718299:AAEamF5A4n1ff80pVZuF2J5GlgEYqTz9l-M" # Не забудь вставити свій токен сюди
 
 def check_air_alert():
     global last_alert_status
