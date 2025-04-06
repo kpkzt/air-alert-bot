@@ -10,7 +10,7 @@ last_alert_status = None
 
 # Дані для SendPulse
 BOT_ID = "6571c6acaa0e5f3a19061706"
-TOKEN = f"Bearer {os.getenv('6905718299:AAEamF5A4n1ff80pVZuF2J5GlgEYqTz9l-M')}"  # Не забудь вставити свій токен сюди
+TOKEN = "Bearer ВСТАВ_ТУТ_СВІЙ_ТОКЕН"  # Обов'язково додай "Bearer " перед токеном
 
 def check_air_alert():
     global last_alert_status
@@ -54,10 +54,10 @@ def send_message_to_bot(text):
     response = requests.post(url, headers=headers, json=payload)
     print("Відповідь SendPulse:", response.status_code, response.text)
 
-# Перевіряємо кожні 30 секунд
-schedule.every(30).seconds.do(check_air_alert)
+# Перевіряємо кожну хвилину
+schedule.every(1).minutes.do(check_air_alert)
 
-print("Скрипт запущено. Слухаємо тривоги кожні 30 секунд...")
+print("Скрипт запущено. Слухаємо тривоги...")
 
 while True:
     schedule.run_pending()
